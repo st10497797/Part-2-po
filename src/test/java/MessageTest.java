@@ -15,14 +15,14 @@ public class MessageTest {
 
     @Test
     public void testValidMessageCreation() {
-        // Use a  valid 10-digit SA number after +27
+        // Use a , valid 10 - digit SA number after +27
         Message msg = new Message("+2761234567", "Hello, this is a test message.", 1);
 
         assertEquals("+2761234567", msg.getRecipient());
         assertEquals("Hello, this is a test message.", msg.getMessageText());
         assertTrue(msg.getMessageID().startsWith("MSG001-"));
         assertNotNull(msg.getHash());
-        assertEquals(64, msg.getHash().length()); // SHA-256 hash length
+        assertEquals(64, msg.getHash().length()); // SHA-256 hash  length
     }
 
     @Test(expected = IllegalArgumentException.class)
