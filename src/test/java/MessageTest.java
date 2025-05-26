@@ -15,7 +15,7 @@ public class MessageTest {
 
     @Test
     public void testValidMessageCreation() {
-        // Use a valid 10-digit SA number after +27
+        // Use a  valid 10-digit SA number after +27
         Message msg = new Message("+2761234567", "Hello, this is a test message.", 1);
 
         assertEquals("+2761234567", msg.getRecipient());
